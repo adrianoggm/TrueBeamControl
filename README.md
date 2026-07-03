@@ -38,13 +38,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+Si `streamlit` no esta en el PATH, funciona igual llamandolo como modulo de
+Python:
+
+```bash
+python -m streamlit run app.py
+```
+
 Se abre en el navegador y muestra dos graficas apiladas (MPC arriba, QuickCheck
 CAX abajo), cada una con su tabla de estadisticas por energia. En la barra
 lateral izquierda:
 
 - **Actualizar datos** — vuelve a leer los CSV de la carpeta (los ficheros se
   releen en cada recarga; este boton la fuerza).
-- **Energia** — `Todas` (superpone las 4) o una concreta (6X, 6FFF, 10, 15).
+- **Energia** — `Todas` (superpone las 4) o una concreta (6X, 6FFF, 10FFF, 15).
 - **Rango de fechas** — slider compartido por las dos graficas.
 - **Agregacion** — `Punto a punto` (cada medida) o agrupar por `Dia` / `Semana`
   / `Mes`.
